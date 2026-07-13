@@ -2,10 +2,136 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>はじめてのサイト</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <!-- Google フォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- リセットCSS -->
+  <link rel="stylesheet" href="../css/reset.css">
+
+  <!-- スタイルのCSS -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- 小説の縦書き・横書きを決めるCSS。デフォルトは横書きにする。デフォルトで縦書きにしたいときは以下の href="../css/yokogaki.css" を href="../css/tategaki.css" に変更する -->
+  <link rel="stylesheet" href="../css/yokogaki.css" type="text/css" id="novelTateyoko">
+
+  <!-- 閲覧設定を切り替えるJavaScript -->
+  <script defer src="../js/novel.js"></script>
 </head>
 <body>
-  <h1>こんにちは！</h1>
-  <p>はじめてのホームページです。</p>
+	<main class="novel_main">
+		<aside class="novel_aside common-other-parts">
+			<details class="novel_details"><summary class="novel_summary">小説閲覧設定</summary>
+				<div class="novel_div">
+					<dl class="novel_dl">
+						<dt>向き</dt>
+						<dd id="switchTateyoko" class="display-grid display-grid-kosuu-2">
+							<button id="btn_tategaki">縦書き↓</button>
+							<button id="btn_yokogaki">横書き→</button>
+						</dd>
+						<dt>フォント</dt>
+						<dd id="switchFont" class="display-grid display-grid-kosuu-2">
+							<button class="serif" id="btn_mincho">明朝</button>
+							<button id="btn_gothic">ゴシック</button>
+						</dd>
+						<dt>背景色</dt>
+						<dd id="switchPageBackgroundcolor" class="display-grid display-grid-kosuu-5">
+							<button id="btn_white">白</button>
+							<button id="btn_black">黒</button>
+							<button id="btn_gray">灰</button>
+							<button id="btn_blue">青</button>
+							<button id="btn_yellow">黄</button>
+						</dd>
+						<dt>サイズ</dt>
+						<dd id="switchFontSize" class="display-grid display-grid-kosuu-5">
+							<button id="btn_extra_small"><span class="extra_small">特小</span></button>
+							<button id="btn_small"><span class="small">小</span></button>
+							<button id="btn_middle">中</button>
+							<button id="btn_large"><span class="large">大</span></button>
+							<button id="btn_extra_large"><span class="extra_large">特大</span></button>
+						</dd>
+					</dl>
+				</div>
+			</details>
+		</aside>
+		<p class="title common-other-parts">手袋を買いに (新美南吉)</p>
+		<article class="novel_article">
+			<div class="middle gothic gray" id="hb">
+				<div id="hb-block">
+					　寒い冬が北方から、<ruby>狐<rp>（</rp><rt>きつね</rt><rp>）</rp></ruby>の親子の<ruby>棲<rp>（</rp><rt>す</rt><rp>）</rp></ruby>んでいる森へもやって来ました。<br>
+					　<ruby>或朝<rp>（</rp><rt>あるあさ</rt><rp>）</rp></ruby><ruby>洞穴<rp>（</rp><rt>ほらあな</rt><rp>）</rp></ruby>から子供の狐が出ようとしましたが、<br>
+					「あっ」と叫んで<ruby>眼<rp>（</rp><rt>め</rt><rp>）</rp></ruby>を<ruby>抑<rp>（</rp><rt>おさ</rt><rp>）</rp></ruby>えながら母さん狐のところへころげて来ました。<br>
+					「母ちゃん、眼に何か刺さった、ぬいて<ruby>頂戴<rp>（</rp><rt>ちょうだい</rt><rp>）</rp></ruby>早く早く」と言いました。<br>
+					<br>
+					　母さん狐がびっくりして、あわてふためきながら、眼を抑えている子供の手を恐る恐るとりのけて見ましたが、何も刺さってはいませんでした。母さん狐は洞穴の入口から外へ出て始めてわけが<ruby>解<rp>（</rp><rt>わか</rt><rp>）</rp></ruby>りました。昨夜のうちに、真白な雪がどっさり降ったのです。その雪の上からお<ruby>陽<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>さまがキラキラと<ruby>照<rp>（</rp><rt>てら</rt><rp>）</rp></ruby>していたので、雪は<ruby>眩<rp>（</rp><rt>まぶ</rt><rp>）</rp></ruby>しいほど反射していたのです。雪を知らなかった子供の狐は、あまり強い反射をうけたので、眼に何か刺さったと思ったのでした。<br>
+					<br>
+					　子供の狐は遊びに行きました。<ruby>真綿<rp>（</rp><rt>まわた</rt><rp>）</rp></ruby>のように<ruby>柔<rp>（</rp><rt>やわら</rt><rp>）</rp></ruby>かい雪の上を<ruby>駈<rp>（</rp><rt>か</rt><rp>）</rp></ruby>け<ruby>廻<rp>（</rp><rt>まわ</rt><rp>）</rp></ruby>ると、雪の<ruby>粉<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>が、しぶきのように飛び散って小さい<ruby>虹<rp>（</rp><rt>にじ</rt><rp>）</rp></ruby>がすっと映るのでした。<br>
+					<br>
+					　すると突然、うしろで、<br>
+					「どたどた、ざーっ」と<ruby>物凄<rp>（</rp><rt>ものすご</rt><rp>）</rp></ruby>い音がして、パン粉のような<ruby>粉雪<rp>（</rp><rt>こなゆき</rt><rp>）</rp></ruby>が、ふわーっと子狐におっかぶさって来ました。子狐はびっくりして、雪の中にころがるようにして十<ruby>米<rp>（</rp><rt>メートル</rt><rp>）</rp></ruby>も向こうへ逃げました。何だろうと思ってふり返って見ましたが何もいませんでした。それは<ruby>樅<rp>（</rp><rt>もみ</rt><rp>）</rp></ruby>の枝から雪がなだれ落ちたのでした。まだ枝と枝の間から白い絹糸のように雪がこぼれていました。<br>
+					<br>
+					　間もなく洞穴へ帰って来た子狐は、<br>
+					「お母ちゃん、お手々が冷たい、お手々がちんちんする」と言って、<ruby>濡<rp>（</rp><rt>ぬ</rt><rp>）</rp></ruby>れて<ruby>牡丹色<rp>（</rp><rt>ぼたんいろ</rt><rp>）</rp></ruby>になった両手を母さん狐の前にさしだしました。母さん狐は、その手に、は――っと息をふっかけて、ぬくとい母さんの手でやんわり包んでやりながら、<br>
+					「もうすぐ<ruby>暖<rp>（</rp><rt>あたたか</rt><rp>）</rp></ruby>くなるよ、雪をさわると、すぐ暖くなるもんだよ」といいましたが、かあいい坊やの手に<ruby>霜焼<rp>（</rp><rt>しもやけ</rt><rp>）</rp></ruby>ができてはかわいそうだから、夜になったら、町まで行って、<ruby>坊<rp>（</rp><rt>ぼう</rt><rp>）</rp></ruby>やのお手々にあうような毛糸の手袋を買ってやろうと思いました。<br>
+					<br>
+					　暗い暗い夜が<ruby>風呂敷<rp>（</rp><rt>ふろしき</rt><rp>）</rp></ruby>のような影をひろげて野原や森を包みにやって来ましたが、雪はあまり白いので、包んでも包んでも白く浮びあがっていました。<br>
+					　親子の銀狐は洞穴から出ました。子供の方はお母さんのお<ruby>腹<rp>（</rp><rt>なか</rt><rp>）</rp></ruby>の下へはいりこんで、そこからまんまるな眼をぱちぱちさせながら、あっちやこっちを見ながら歩いて行きました。<br>
+					　やがて、<ruby>行手<rp>（</rp><rt>ゆくて</rt><rp>）</rp></ruby>にぽっつりあかりが一つ見え始めました。それを子供の狐が見つけて、<br>
+					「母ちゃん、お星さまは、あんな低いところにも落ちてるのねえ」とききました。<br>
+					「あれはお星さまじゃないのよ」と言って、その時母さん狐の足はすくんでしまいました。<br>
+					「あれは町の<ruby>灯<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>なんだよ」<br>
+					<br>
+					　その町の灯を見た時、母さん狐は、ある時町へお友達と出かけて行って、とんだめにあったことを<ruby>思出<rp>（</rp><rt>おもいだ</rt><rp>）</rp></ruby>しました。およしなさいっていうのもきかないで、お友達の狐が、<ruby>或<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>る家の<ruby>家鴨<rp>（</rp><rt>あひる</rt><rp>）</rp></ruby>を盗もうとしたので、お<ruby>百姓<rp>（</rp><rt>ひゃくしょう</rt><rp>）</rp></ruby>に見つかって、さんざ追いまくられて、命からがら逃げたことでした。<br>
+					「母ちゃん何してんの、早く行こうよ」と子供の狐がお腹の下から言うのでしたが、母さん狐はどうしても足がすすまないのでした。そこで、しかたがないので、<ruby>坊<rp>（</rp><rt>ぼう</rt><rp>）</rp></ruby>やだけを一人で町まで行かせることになりました。<br>
+					<br>
+					「坊やお手々を片方お出し」とお母さん狐がいいました。その手を、母さん狐はしばらく握っている間に、可愛いい人間の子供の手にしてしまいました。坊やの狐はその手をひろげたり握ったり、<ruby>抓<rp>（</rp><rt>つね</rt><rp>）</rp></ruby>って見たり、<ruby>嗅<rp>（</rp><rt>か</rt><rp>）</rp></ruby>いで見たりしました。<br>
+					<br>
+					「何だか変だな母ちゃん、これなあに？」と言って、雪あかりに、またその、人間の手に変えられてしまった自分の手をしげしげと見つめました。<br>
+					<br>
+					「それは人間の手よ。いいかい坊や、町へ行ったらね、たくさん人間の家があるからね、まず表に<ruby>円<rp>（</rp><rt>まる</rt><rp>）</rp></ruby>いシャッポの看板のかかっている家を<ruby>探<rp>（</rp><rt>さが</rt><rp>）</rp></ruby>すんだよ。それが見つかったらね、トントンと戸を<ruby>叩<rp>（</rp><rt>たた</rt><rp>）</rp></ruby>いて、今晩はって言うんだよ。そうするとね、中から人間が、すこうし戸をあけるからね、その戸の<ruby>隙間<rp>（</rp><rt>すきま</rt><rp>）</rp></ruby>から、こっちの手、ほらこの人間の手をさし入れてね、この手にちょうどいい手袋頂戴って言うんだよ、わかったね、決して、こっちのお手々を出しちゃ<ruby>駄目<rp>（</rp><rt>だめ</rt><rp>）</rp></ruby>よ」と母さん狐は言いきかせました。<br>
+					<br>
+					「どうして？」と坊やの狐はききかえしました。<br>
+					<br>
+					「人間はね、相手が狐だと解ると、手袋を売ってくれないんだよ、それどころか、<ruby>掴<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>まえて<ruby>檻<rp>（</rp><rt>おり</rt><rp>）</rp></ruby>の中へ入れちゃうんだよ、人間ってほんとに<ruby>恐<rp>（</rp><rt>こわ</rt><rp>）</rp></ruby>いものなんだよ」<br>
+					「ふーん」<br>
+					「決して、こっちの手を出しちゃいけないよ、こっちの方、ほら人間の手の方をさしだすんだよ」と言って、母さんの狐は、持って来た二つの<ruby>白銅貨<rp>（</rp><rt>はくどうか</rt><rp>）</rp></ruby>を、人間の手の方へ握らせてやりました。<br>
+					<br>
+					　子供の狐は、町の<ruby>灯<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>を目あてに、雪あかりの野原をよちよちやって行きました。始めのうちは一つきりだった灯が二つになり三つになり、はては十にもふえました。狐の子供はそれを見て、灯には、星と同じように、赤いのや黄いのや青いのがあるんだなと思いました。やがて町にはいりましたが通りの家々はもうみんな戸を<ruby>閉<rp>（</rp><rt>し</rt><rp>）</rp></ruby>めてしまって、高い窓から暖かそうな光が、道の雪の上に落ちているばかりでした。<br>
+					<br>
+					　けれど表の看板の上には大てい小さな電燈がともっていましたので、狐の子は、それを見ながら、帽子屋を探して行きました。自転車の看板や、<ruby>眼鏡<rp>（</rp><rt>めがね</rt><rp>）</rp></ruby>の看板やその他いろんな看板が、あるものは、新しいペンキで<ruby>画<rp>（</rp><rt>か</rt><rp>）</rp></ruby>かれ、<ruby>或<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>るものは、古い壁のようにはげていましたが、町に始めて出て来た子狐にはそれらのものがいったい何であるか分らないのでした。<br>
+					<br>
+					　とうとう帽子屋がみつかりました。お母さんが道々よく教えてくれた、黒い大きなシルクハットの帽子の看板が、青い電燈に<ruby>照<rp>（</rp><rt>てら</rt><rp>）</rp></ruby>されてかかっていました。<br>
+					　子狐は教えられた通り、トントンと戸を叩きました。<br>
+					「今晩は」<br>
+					　すると、中では何かことこと音がしていましたがやがて、戸が一寸ほどゴロリとあいて、光の帯が道の白い雪の上に長く伸びました。<br>
+					　子狐はその光がまばゆかったので、めんくらって、まちがった方の手を、――お母さまが出しちゃいけないと言ってよく聞かせた方の手をすきまからさしこんでしまいました。<br>
+					「このお手々にちょうどいい手袋下さい」<br>
+					<br>
+					　すると帽子屋さんは、おやおやと思いました。狐の手です。狐の手が手袋をくれと言うのです。
+				</div>
+			</div>
+		</article>
+		<div class="atogaki common-other-parts">
+			小説閲覧設定切り替えテンプレート - タイプA(縦書きが横スクロールする)です。ここにあとがきなど。<br>
+			<br>
+			<b>小説の閲覧設定を変更する機能は<a href="https://illbenet.jp/" target="_blank" rel="noopener noreferrer">I'll be NET</a>様の<a href="https://illbenet.jp/view/js-tategaki__novel_like_pixiv" target="_blank" rel="noopener noreferrer">pixiv小説のように縦書き表示する方法-2019版</a>を元に作成しています。</b>
+			<br><br>
+			小説は<a href="https://www.aozora.gr.jp/" target="_blank" rel="noopener noreferrer">青空文庫</a>様の<a href="https://www.aozora.gr.jp/cards/000121/files/637_13341.html" target="_blank" rel="noopener noreferrer">手袋を買いに(新美南吉)</a>から。
+		</div>
+		<div class="pagination">
+			<p class="common-other-parts center">
+				<a href="###">&lt;&lt;前</a> ｜ <a href="###">一覧へ戻る</a> ｜ <a href="###">次&gt;&gt;</a>
+			</p>
+		</div>
+	</main>
+	<footer class="center">
+		<p>
+			<a href="###">Site Name</a>
+		</p>
+		Template by <a href="https://asteroid19.netlify.app/">Asteroid</a>
+	</footer>
 </body>
 </html>
