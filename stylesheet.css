@@ -1,0 +1,18 @@
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+*{margin:0; padding:0;}
+body{color:#59607A; background-color:#f4f4f4; font-size:12px; letter-spacing:2.4px; line-height:2; font-family:'Crimson Text',"游明朝","ヒラギノ明朝 ProN W3",Osaka,serif;}
+a{text-decoration:none; color:#59607A; border-bottom:#F4FDD8 2px solid;}
+h1{text-align:center; padding:120px 0 10px; background-color:#fff;}
+.tate{-webkit-writing-mode:vertical-rl; -ms-writing-mode:tb-rl; writing-mode:vertical-rl; text-orientatiom:upright; margin:0 auto; font-size:14px; line-height:3;}
+.menu{padding-top:10px;}
+.menu a{border:none;}
+.kigo{margin-top:-8px; color:#fff;}
+.con{width:85%; max-width:450px; margin:30px auto;}
+em{font-style:normal; font-weight:bold; text-shadow:1px 1px #F4FDD8;}
+@media screen and (max-width:480px){body{font-size:11px; letter-spacing:1.8px;}}
+</style>
+<script type="text/javascript">
+var imglist = new Array( "#mtr1_url#","#mtr2_url#" );
+var selectnum = Math.floor(Math.random() * imglist.length);
+</script><meta name="robots" content="noindex,nofollow,noarchive" />
